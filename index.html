@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- External font -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Ercyber - SHA256 Online Encryption </title>
+  </head>
+  <body>
+    <div id="wrapper">
+        <div class="main-bkg" id="bkg-m">
+            <img
+                src="images/m_ercyber_bkg_x1.jpg"
+                srcset="images/m_ercyber_bkg_x1.jpg 500w, images/m_ercyber_bkg_x2.jpg 1000w"
+                alt=""
+            />
+        </div>
+        <div class="main-bkg" id="bkg-d">
+            <img
+                src="images/d_ercyber_bkg_x1.jpg"
+                srcset="images/d_ercyber_bkg_x1.jpg 500w, images/d_ercyber_bkg_x2.jpg 1000w"
+                alt=""
+            />
+        </div>
+        <div class="header">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-light">
+                <a class="navbar-brand" href="#">
+                    <div class="nav-logo"><img src="./images/logo.svg" alt="" loading="lazy" /></div>
+                </a>
+                <div class="form-inline">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="lang-icon" src="./images/lang-icon.svg" alt="" loading="lazy" width="20"/>
+                            EN
+                        </button>
+                        <div class="dropmenu-wrap">
+                            <div class="dropdown-menu dropmenu-wrap" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">繁體</a>
+                                <a class="dropdown-item" href="#">簡体</a>
+                                <a class="dropdown-item" href="#">English</a>
+                              </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+            </nav>
+            <!-- Navbar End-->
+        </div>
+        <div class="main container">
+            <div class="main-top">
+                <div class="intro">
+                    <h1>SHA-256 Online Encryption</h1>
+                    <p>We offer a fast and free online tool for you to generate <br class="md-block"/>
+                        the SHA256 hash of any string.</p>
+                </div>
+                <!-- Encryption Start -->
+                <div class="encryption-wrap" id="section">
+                    <div class="d-md-flex justify-content-center">
+                        <div class="input-wrap left">
+                            <span class="input-group-text">Data</span>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                </div>
+                                <textarea class="form-control non-resize"  id="CustomInput" aria-label="With textarea" placeholder="Place SHA-256 here..."  autofocus ></textarea>
+                            </div>
+                        </div>
+                        <div class="input-wrap right">
+                            <span class="input-group-text">SHA-256 hash</span>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <textarea class="form-control non-resize"   disabled="true" id="CustomTextarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="encrypter">
+                        <div class="submit">
+                            <button class="btn Hash-btn" type="submit" id="hashBtn" onclick="myHash()">HASH</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- Encryption End -->
+            </div>
+            <div class="main-bottom">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <h2 class="upper-line">what is</h2>
+                        <h1>SHA-256</h1>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-8">
+                        <p>The SHA (Secure Hash Algorithm) is one of a number of cryptographic hash functions. A cryptographic hash is like a signature for a data set. If you would like to compare two sets of raw data (source of the file, text or similar) it is always better to hash it and compare SHA256 values. It is like the fingerprints of the data. Even if only one symbol is changed the algorithm will produce different hash values. SHA256 algorithm generates an almost-unique, fixed size 256-bit (32-byte) hash. Hash is so called a one way function. This makes it suitable for checking the integrity of your data, challenging hash authentication, anti-tamper, digital signatures, blockchain.For example if you download something you can easily check if data has not changed due to network errors or malware injection. 
+                            Using this online tool you can easily generate SHA256 hashes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-bottom about">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <h1 class="upper-line">About <br class="md-block"/>Us</h1>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-8">
+                        <p>Ercyber.com is a free third-party platform that provides SHA-256 technology for users to perform blockchain encryption. Users only need to input data to calculate a SHA-256 hash, providing users with a reliable encryption platform. This technology can be used in different aspects such as transactions and games.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h6>Copyright © 2020 ercyber.com. All rights reserved.</h6>
+        </div>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function() {
+        if ($(document).scrollTop() > 100) {
+            $('.navbar').addClass('color-change');
+        } else {
+            $('.navbar').removeClass('color-change');
+        }
+        });
+        
+        function myHash() {
+        //  document.getElementById("CustomTextarea").disabled = false;
+         $('#CustomTextarea').val($('#CustomTextarea').val()+'815aca43f625abd29831021b026c3324deaf21d266873c66588ffcc79f509e2b'); 
+        } 
+
+        $('.dropdown-item').mouseover(function(){
+            $('.dropdown-item').removeClass("active");
+            $(this).addClass("active");
+            return false;
+        });
+        $('.dropdown-item').mouseleave(function(){
+            $(this).removeClass("active");
+        });
+
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
